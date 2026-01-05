@@ -9,14 +9,14 @@ int main() {
     printf("~~Fahrenheit and celsius converter~~\n");
     printf("Directory:\n1. Enter 'F' to convert fahrenheit to celsius\n2. Enter 'C' to convert celsius to fahrenheit\nEnter option (F or C) here: ");
     scanf("%c",&ForC);
-    if (ForC='F') {
+    if (ForC=='F'||ForC=='f') {
         printf("Enter fahrenheit value: ");
         scanf("%lf",&inF);
         outC=(5.0/9.0)*(inF-32);
         printf("Converted output: %lf°C",outC);
         return 0;
     };
-    if (ForC='C')  {
+    if (ForC=='C'\\ForC=='c')  {
         printf("Enter celsius value: ");
         scanf("%lf",&inC);
         outF=(9.0/5.0)*(inC)+32;
