@@ -16,7 +16,7 @@ int main() {
         printf("Converted output: %lf°C",outC);
         return 0;
     };
-    if (ForC=='C'\\ForC=='c')  {
+    if (ForC=='C'||ForC=='c')  {
         printf("Enter celsius value: ");
         scanf("%lf",&inC);
         outF=(9.0/5.0)*(inC)+32;
