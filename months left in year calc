@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int month;
+    const char *monthName[]={
+        "January","February","March","April","May","June","July","August","September","October","November","December"
+    };
+    printf("~~Months left this year calculator~~\n");
+    printf("Enter the current month in number format (1-12): ");
+    scanf("%d",&month);
+
+    if (month<1||month>12) {
+        printf("Invalid month entered.");
+        return 1;
+    };
+    printf("Current month: %s\n",monthName[month-1]);
+    int monthsRemaining=12-month;
+    printf("Months remaining this year: %d",monthsRemaining);
+    return 0;
+}
