@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main() {
+    double m;
+    double d1;
+    double v;
+    char nIn[4];
+    double nOut;
+    int K=1;
+    
+    printf("~~Armor penetration calculator~~\n");
+    printf("Average numbers to base your own input off of are:\nm = 6kg\nd = 75mm\nv = 700m/s\n");
+    printf("DISCLAMER: This calculator does NOT give an actual value of how much armor was penetrated, it only give you are scale of how much armor is penetrated because it doesn't account for what type of shell was used, thickness of the armor, angle of the armor, etc.. To get an accurate output you must insert your own value by solving for K.\n\n");
+    
+    printf("(1/4) Enter m value (projectile mass in kg): ");
+    scanf("%lf",&m);
+    
+    if (m<=0) {
+        printf("Invalid projectile mass entered.");
+        return 1;
+    };
+    
+    printf("(2/4) Enter d value (projectile diameter in mm): ");
+    scanf("%lf",&d1);
+    
+    if (d1<=0) {
+        printf("Invalid project diameter entered.");
+        return 1;
+    };
+    
+    printf("(3/4) Enter v value (projectile impact velocity in m/s: ");
+    scanf("%lf",&v);
+    
+    if (v<=0) {
+        printf("Invalid impact velocity entered.");
+        return 1;
+    };
+    
+    printf("(4/4) Enter rough distance of shot, ONLY enter 'near' or 'long': ");
+    scanf("%s",&nIn);
+    
+    if (nIn ==! "near" || nIn ==! "long") {
+        printf("Invalid option entered.");
+        return 1;
+    };
+    if (nIn=="near") {
+        nOut=1.35;
+    } else {
+        nOut=1.15;
+    };
+    
+    double d2=d1/1000;
+    double out=K*m/pow(pow(d2,3),.5)*pow(v,nOut);
+    printf("Output: %lf x K",out);
+    return 0;
+}
