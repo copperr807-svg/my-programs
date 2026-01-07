@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int math1() {
+    int num1=13-4;
+    return num1;
+}
+
+int math2() {
+    int num2=4*2;
+    return num2;
+}    
+
+int main() {
+    int num1=math1();
+    int num2=math2();
+    
+    int result=num1+num2;
+    printf("Output: %d",result);
+    return 0;
+}
