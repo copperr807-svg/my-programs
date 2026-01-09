@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    char grade;
+    printf("Enter your letter grade (A, B, C, D, or F): ");
+    scanf(" %c",&grade);
+    
+    switch (grade) {
+        case 'A':
+            printf("\nGreat job, Agartha excepts you!");
+            break;
+        case 'B':
+            printf("I mean isite.");
+            break;
+        case 'C':
+           printf("\nMy mom said Cs get degrees (not the language I'm talking about your grade).");
+           break;
+        case 'D':
+            printf("\nDawg your dumb (D for dumb).");
+            break;
+        case 'F':
+            printf("\nYou absolute NEANDERTHAL, you think you're an inventor but you're just gonna be putting the fries in the bag or fent folding behind McDonalds.");
+            break;
+        default:
+            printf("\nInvalid grade letter entered.");
+            return 1;    
+        };
+    return 0;
+}
