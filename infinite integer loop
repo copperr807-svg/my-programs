@@ -1,0 +1,11 @@
+#include <stdio.h>
+//wWARNING: dont let this loop run for too long because it will start to lag
+
+int main() {
+    int x;
+    
+    for (;;) {
+        printf("%d",&x);
+    };
+    return 0;
+}
