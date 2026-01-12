@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+struct x {
+    char name[10];
+    char colorFav[10];
+    double numFav;
+    int age;
+};
+
+int main() {
+
+    int opt;
+    
+    struct x y1;
+    strcpy(y1.name, "Colin");
+    strcpy(y1.colorFav, "orange");
+    y1.numFav = 4.0;
+    y1.age = 15;
+    
+    struct x y2;
+    strcpy(y2.name, "Copper");
+    strcpy(y2.colorFav, "green");
+    y2.numFav = 1.0;
+    y2.age = 12;
+    
+    printf("Enter '1' for information on yourself or enter '2' for information on your dog: ");
+    scanf("%d", &opt);
+    
+    if (opt == 1) {
+        printf("Your name is %s, your favorite color is %s. Alongside this, your favorite number is %f and you are %d.", y1.name, y1.colorFav, y1.numFav, y1.age);
+    } else if (opt == 2) {
+        printf("Your name is %s, your favorite color is %s. Alongside this, your favorite number is %f and you are %d.", y2.name, y2.colorFav, y2.numFav, y2.age);
+    } else {
+        printf("Invalid option entered, process ended.");
+        return 1;
+    };    
+    
+    return 0;
+}
